@@ -23,259 +23,46 @@
       ></v-switch>
       <v-row>
         <v-col
+            v-for="tour in items" :key="tour.id"
             cols="12"
             sm="4"
         >
           <v-card>
             <v-img
-                src="https://edge.travelatacdn.ru/thumbs/640x480/upload/2015_33/content_hotel_56fe32097df1f0.39503861.jpg"
+                :src="tour.hotel_image"
                 height="200px"
             ></v-img>
 
             <v-card-title class="d-block">
-              <v-rating
-                  class="ma-0"
-                  readonly
-                  value="4"
-                  length="4"
-                  size="20"
-                  color="amber"
-                  dense
-              ></v-rating>
-              Continental Plaza Beach Resort
+              <!--                <v-rating
+                                  class="ma-0"
+                                  readonly
+                                  value="4"
+                                  length="4"
+                                  size="20"
+                                  color="amber"
+                                  dense
+                              ></v-rating>-->
+              {{tour.hotel}}
             </v-card-title>
 
             <v-card-subtitle>
-              Шарм-Эль-Шейх, Египет
+              {{tour.destination}}
             </v-card-subtitle>
             <v-card-text>
-              <div class="my-4 text-subtitle-1">
+              <div class="my-4 text-subtitle-1" v-if="tour.pets">
                 <span class="d-flex align-center"><v-icon class="pr-1">mdi-paw</v-icon> Можно с животными</span>
               </div>
             </v-card-text>
             <v-card-actions>
               <v-btn
+                  :to="'/tour/' + tour.id"
                   block
                   color="primary"
                   x-large
                   class="px-8"
               >
-                <span><b>Заказать за 30870 руб.</b></span>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col
-            cols="12"
-            sm="4"
-        >
-          <v-card>
-            <v-img
-                src="https://edge.travelatacdn.ru/thumbs/640x480/upload/2015_33/content_hotel_56fe32097df1f0.39503861.jpg"
-                height="200px"
-            ></v-img>
-
-            <v-card-title class="d-block">
-              <v-rating
-                  class="ma-0"
-                  readonly
-                  value="4"
-                  length="4"
-                  size="20"
-                  color="amber"
-                  dense
-              ></v-rating>
-              Continental Plaza Beach Resort
-            </v-card-title>
-
-            <v-card-subtitle>
-              Шарм-Эль-Шейх, Египет
-            </v-card-subtitle>
-            <v-card-text>
-              <div class="my-4 text-subtitle-1">
-                <span class="d-flex align-center"><v-icon class="pr-1">mdi-paw</v-icon> Можно с животными</span>
-              </div>
-            </v-card-text>
-            <v-card-actions>
-              <v-btn
-                  block
-                  color="primary"
-                  x-large
-                  class="px-8"
-              >
-                <span><b>Заказать за 30870 руб.</b></span>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col
-            cols="12"
-            sm="4"
-        >
-          <v-card>
-            <v-img
-                src="https://edge.travelatacdn.ru/thumbs/640x480/upload/2015_33/content_hotel_56fe32097df1f0.39503861.jpg"
-                height="200px"
-            ></v-img>
-
-            <v-card-title class="d-block">
-              <v-rating
-                  class="ma-0"
-                  readonly
-                  value="4"
-                  length="4"
-                  size="20"
-                  color="amber"
-                  dense
-              ></v-rating>
-              Continental Plaza Beach Resort
-            </v-card-title>
-
-            <v-card-subtitle>
-              Шарм-Эль-Шейх, Египет
-            </v-card-subtitle>
-            <v-card-text>
-              <div class="my-4 text-subtitle-1">
-                <span class="d-flex align-center"><v-icon class="pr-1">mdi-paw</v-icon> Можно с животными</span>
-              </div>
-            </v-card-text>
-            <v-card-actions>
-              <v-btn
-                  block
-                  color="primary"
-                  x-large
-                  class="px-8"
-              >
-                <span><b>Заказать за 30870 руб.</b></span>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col
-            cols="12"
-            sm="4"
-        >
-          <v-card>
-            <v-img
-                src="https://edge.travelatacdn.ru/thumbs/640x480/upload/2015_33/content_hotel_56fe32097df1f0.39503861.jpg"
-                height="200px"
-            ></v-img>
-
-            <v-card-title class="d-block">
-              <v-rating
-                  class="ma-0"
-                  readonly
-                  value="4"
-                  length="4"
-                  size="20"
-                  color="amber"
-                  dense
-              ></v-rating>
-              Continental Plaza Beach Resort
-            </v-card-title>
-
-            <v-card-subtitle>
-              Шарм-Эль-Шейх, Египет
-            </v-card-subtitle>
-            <v-card-text>
-              <div class="my-4 text-subtitle-1">
-                <span class="d-flex align-center"><v-icon class="pr-1">mdi-paw</v-icon> Можно с животными</span>
-              </div>
-            </v-card-text>
-            <v-card-actions>
-              <v-btn
-                  block
-                  color="primary"
-                  x-large
-                  class="px-8"
-              >
-                <span><b>Заказать за 30870 руб.</b></span>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col
-            cols="12"
-            sm="4"
-        >
-          <v-card>
-            <v-img
-                src="https://edge.travelatacdn.ru/thumbs/640x480/upload/2015_33/content_hotel_56fe32097df1f0.39503861.jpg"
-                height="200px"
-            ></v-img>
-
-            <v-card-title class="d-block">
-              <v-rating
-                  class="ma-0"
-                  readonly
-                  value="4"
-                  length="4"
-                  size="20"
-                  color="amber"
-                  dense
-              ></v-rating>
-              Continental Plaza Beach Resort
-            </v-card-title>
-
-            <v-card-subtitle>
-              Шарм-Эль-Шейх, Египет
-            </v-card-subtitle>
-            <v-card-text>
-              <div class="my-4 text-subtitle-1">
-                <span class="d-flex align-center"><v-icon class="pr-1">mdi-paw</v-icon> Можно с животными</span>
-              </div>
-            </v-card-text>
-            <v-card-actions>
-              <v-btn
-                  block
-                  color="primary"
-                  x-large
-                  class="px-8"
-              >
-                <span><b>Заказать за 30870 руб.</b></span>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col
-            cols="12"
-            sm="4"
-        >
-          <v-card>
-            <v-img
-                src="https://edge.travelatacdn.ru/thumbs/640x480/upload/2015_33/content_hotel_56fe32097df1f0.39503861.jpg"
-                height="200px"
-            ></v-img>
-
-            <v-card-title class="d-block">
-              <v-rating
-                  class="ma-0"
-                  readonly
-                  value="4"
-                  length="4"
-                  size="20"
-                  color="amber"
-                  dense
-              ></v-rating>
-              Continental Plaza Beach Resort
-            </v-card-title>
-
-            <v-card-subtitle>
-              Шарм-Эль-Шейх, Египет
-            </v-card-subtitle>
-            <v-card-text>
-              <div class="my-4 text-subtitle-1">
-                <span class="d-flex align-center"><v-icon class="pr-1">mdi-paw</v-icon> Можно с животными</span>
-              </div>
-            </v-card-text>
-            <v-card-actions>
-              <v-btn
-                  block
-                  color="primary"
-                  x-large
-                  class="px-8"
-              >
-                <span><b>Заказать за 30870 руб.</b></span>
+                <span><b>Заказать за {{tour.price}}0 руб.</b></span>
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -286,10 +73,21 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data: () => ({
-    items: ['Возрастанию', 'Убыванию'],
+    items: []
   }),
+  created() {
+    let urlParams = new URLSearchParams(window.location.search);
+    axios
+        .get(`https://63be6212f5cfc0949b564539.mockapi.io/api/tours?depAero=${urlParams.get('depAero')}&destination=${urlParams.get('destination')}&pets=${urlParams.get('pets')}`)
+        .then(response => {
+          this.items = response.data
+        })
+  }
 }
 
 </script>
+/search?depAero=' + dep_select + '&destination=' + dest_select + '&pets=' + pets
